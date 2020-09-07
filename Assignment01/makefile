@@ -2,10 +2,10 @@
 CC = ozc
 
 # Compiler flags
-CFLAGS = --warnopt --warnunusedformals
+CFLAGS = --warnopt
 
 # Define sources
-FILES = $(shell find -name "*.oz")
+FILES = $(shell find -maxdepth 1 -name "*.oz")
 
 # Define objects
 OBJ = $(FILES:.oz=.ozf)
