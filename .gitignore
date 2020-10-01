@@ -1,4 +1,5 @@
 *.oza
 *.ozf
 **/*.zip
+**/*.pdf
 tags
