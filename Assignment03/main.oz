@@ -101,11 +101,13 @@ in
 end
 
 % Task 5
-/* local */
-/*    fun {LazyNumberGenerator StartValue} */
-/*    end */
-/* in */
-/* end */
+local
+   fun {LazyNumberGenerator StartValue}
+      StartValue | fun {$} {LazyNumberGenerator StartValue+1} end
+   end
+in
+   {System.show {{{{{{LazyNumberGenerator 0}.2}.2}.2}.2}.2}.1}
+end
 
 {Application.exit 0}
 end
